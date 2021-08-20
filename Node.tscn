@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Button.gd" type="Script" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 64.5027
+margin_top = 209.268
+margin_right = 163.503
+margin_bottom = 238.268
+text = "Convert"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="OutputLabel" type="Label" parent="."]
+margin_left = 180.503
+margin_top = 257.268
+margin_right = 284.503
+margin_bottom = 286.268
+text = "Value"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TempValueTextEdit" type="TextEdit" parent="."]
+margin_left = 235.0
+margin_top = 159.0
+margin_right = 303.0
+margin_bottom = 183.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 65.5027
+margin_top = 257.268
+margin_right = 173.503
+margin_bottom = 271.268
+text = "Converted Value:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputItemList" type="ItemList" parent="."]
+margin_left = 62.5027
+margin_top = 68.2683
+margin_right = 190.503
+margin_bottom = 146.268
+items = [ "Celsius", null, false, "Fahrenheit", null, false, "Kelvin", null, false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OutputItemList" type="ItemList" parent="."]
+margin_left = 220.503
+margin_top = 68.2683
+margin_right = 338.503
+margin_bottom = 146.268
+items = [ "Celsius", null, false, "Fahrenheit", null, false, "Kelvin", null, false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 66.0
+margin_top = 165.0
+margin_right = 227.0
+margin_bottom = 196.0
+text = "Enter Temperature Value:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 63.8648
+margin_top = 45.7568
+margin_right = 144.865
+margin_bottom = 62.7568
+text = "Input Scale"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 222.784
+margin_top = 46.1622
+margin_right = 304.784
+margin_bottom = 64.1622
+text = "Output Scale"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 63.6216
+margin_top = 12.0
+margin_right = 284.622
+margin_bottom = 27.0
+text = "Temperature conversion Program"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputDregreeLabel" type="Label" parent="."]
+margin_left = 309.0
+margin_top = 157.0
+margin_right = 349.0
+margin_bottom = 182.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="item_selected" from="InputItemList" to="Button" method="_on_InputItemList_item_selected"]
+[connection signal="item_selected" from="OutputItemList" to="Button" method="_on_OutputItemList_item_selected"]
